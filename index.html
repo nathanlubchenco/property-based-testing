@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Property Based Testing</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Property Based Testing">
+  <meta name="author" content="Nathan Lubchenco">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Property Based Testing</h1>
+    <h2>Get more, for less</h2>
+    <p>Nathan Lubchenco<br/>Data Scientist @simpleenergy</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>why should i pay attention for the next ~15 minutes?</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>if all goes well, you&#39;ll:</h3>
+
+<ul>
+<li><p>discover bugs you wouldn&#39;t have otherwise caught</p></li>
+<li><p>have to think less hard</p></li>
+<li><p>get to work less hard</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>What is Property Based Testing?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Instead of testing that a function produces the appropriate output from a specific input, test that a property holds for a range of generated inputs</p>
+
+<h3>Unit Based Example for addition</h3>
+
+<ul>
+<li>2 + 2 = 4</li>
+<li>0 + 10 = 10</li>
+<li>-2 + 2 = 0</li>
+</ul>
+
+<h3>Property Based example for addition</h3>
+
+<ul>
+<li>odd + odd = even</li>
+<li>even + odd = odd</li>
+<li>negative + negative = negative</li>
+<li>n + zero = n</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Some Libraries</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>QuickCheck (Haskell)</li>
+<li>ScalaCheck</li>
+<li>qc.js </li>
+<li>rubycheck</li>
+<li>qc.py</li>
+<li>numerous others (check wikipedia for links)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example -- the function</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>def streamingMean(data: Stream[Double]): Error \/ Mean = {
+  def go(data: Stream[Double], mean: Double, count: Double): Mean = {
+    if (data.isEmpty) Mean(mean)
+    else {
+      val newMean = ((mean * count) + data.head) / (count + 1)
+      go(data.tail, newMean, count + 1)
+    }
+  }
+  if (data.isEmpty) EmptyStream.left
+  else go(data, 0, 0).right
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example -- helpers</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>implicit val arbStream: Arbitrary[Stream[Double]] = 
+  Arbitrary(Gen.containerOf[Stream, Double](Gen.posNum[Double]))
+
+def withinErrorBounds(d1: Double, d2: Double, error: Double) = 
+  if (d1 &gt; (d2 - error) &amp;&amp; d1 &lt; (d2 + error)) true else false
+
+def emptyStreamOrNoReplacement(error: Error) = 
+  if (error == EmptyStream || error == NoReplacement) true else false
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example -- the test</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;streamingMean&quot; should {
+  &quot;return the correct mean&quot; in check {
+    (data: Stream[Double]) =&gt;
+      val streamedMean = StreamingStats.streamingMean(data)
+      if (data.isEmpty) {
+        streamedMean.fold(error =&gt; EmptyStream mustEqual error, _ =&gt; ???)
+      }
+      else {
+        val mean = (data.foldLeft(0.0)(_ + _) / data.size)
+        streamedMean.fold(
+          error =&gt; EmptyStream mustEqual error, 
+          result =&gt; withinErrorBounds(result.d, mean, 0.001d) must beTrue
+        )
+      } 
+  }
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='why should i pay attention for the next ~15 minutes?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What is Property Based Testing?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Some Libraries'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='ScalaCheck Example -- the function'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='ScalaCheck Example -- helpers'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='ScalaCheck Example -- the test'>
+         6
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
