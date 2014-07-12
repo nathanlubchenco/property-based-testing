@@ -1,0 +1,19 @@
+[0m[[0minfo[0m] [0mIntProps[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37modds integers should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m always be odd[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m produce an even number when added together[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37meven integers should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m always be even[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m produce an even number when added together[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37man odd and an even number added together should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m be odd[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37many number added to zero should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m equal the original number[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0mTotal for specification IntProps[0m
+[0m[[0minfo[0m] [0m[36mFinished in 19 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m6 examples, 600 expectations, 0 failure, 0 error[0m[0m
