@@ -10,3 +10,14 @@
 <IntProps-stats timestamp="1405199306990"><stats time="15" expectations="500" successes="5" examples="5"><trend><stats time="15" expectations="100" successes="1" examples="1"></stats></trend></stats></IntProps-stats>
 <IntProps-stats timestamp="1405199441521"><stats time="14" expectations="600" successes="6" examples="6"><trend><stats time="14" expectations="100" successes="1" examples="1"></stats></trend></stats></IntProps-stats>
 <IntProps-stats timestamp="1405200723794"><stats time="19" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1405342480536"><stats time="32" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1405514243459"><stats time="22" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1405514981081"><stats time="15" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1405515038618"><stats time="14" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1405515087058"><stats time="16" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1405991447665"><stats time="30" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1406075066063"><stats time="26" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1406075080284"><stats time="21" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1406077068381"><stats time="17" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1406119694433"><stats time="17" expectations="600" successes="6" examples="6"></stats></IntProps-stats>
+<IntProps-stats timestamp="1406119802524"><stats time="16" expectations="600" successes="6" examples="6"></stats></IntProps-stats>

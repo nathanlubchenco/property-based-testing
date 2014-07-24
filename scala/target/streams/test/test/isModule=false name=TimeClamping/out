@@ -1,0 +1,11 @@
+[0m[[0minfo[0m] [0mTimeClamping[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mclamping should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[35mo[0m produce an interval with a length of [0m[0m
+[0m[[0minfo[0m] [0m[37m       (A) bounding end - bounding start -[0m[0m
+[0m[[0minfo[0m] [0m[37m       (B) (if positive) start - boundingStart -[0m[0m
+[0m[[0minfo[0m] [0m[37m       (C) (if positive) end - boundingEnd[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0mTotal for specification TimeClamping[0m
+[0m[[0minfo[0m] [0m[36mFinished in 16 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m1 example, 0 failure, 0 error, 1 skipped[0m[0m

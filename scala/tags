@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Even	src/test/scala/IntProps.scala	/^case class Even(i: Int) extends AnyVal$/;"	c
+InsufficientData	src/test/scala/StreamingStats.scala	/^  case class InsufficientData(s: String) extends StatsError$/;"	c
+IntProps	src/test/scala/IntProps.scala	/^class IntProps extends Specification with ScalaCheck {$/;"	c
+Odd	src/test/scala/IntProps.scala	/^case class Odd(i: Int) extends AnyVal$/;"	c
+StatsError	src/test/scala/StreamingStats.scala	/^  sealed trait StatsError$/;"	t
+StreamingStats	src/test/scala/StreamingStats.scala	/^class StreamingStats extends Specification with ScalaCheck {$/;"	c
+arbDoubleList	src/test/scala/StreamingStats.scala	/^  implicit val arbDoubleList: Arbitrary[List[Double]] = Arbitrary(Gen.listOf[Double](Gen.chooseNum(-1000, 1000)))$/;"	C
+arbEven	src/test/scala/IntProps.scala	/^  implicit val arbEven: Arbitrary[Even] = Arbitrary(Gen.posNum[Int]$/;"	C
+arbOdd	src/test/scala/IntProps.scala	/^  implicit val arbOdd: Arbitrary[Odd] = Arbitrary(Gen.posNum[Int]$/;"	C
+checkResult	src/test/scala/StreamingStats.scala	/^        val checkResult = doubles.sum \/ doubles.size$/;"	C
+evenPlusZero	src/test/scala/IntProps.scala	/^        val evenPlusZero = even.i + 0$/;"	C
+go	src/test/scala/StreamingStats.scala	/^    def go(data: List[Double], mean: Double, count: Int): Double = {$/;"	m
+newMean	src/test/scala/StreamingStats.scala	/^        val newMean = ((mean * count) + data.head) \/ (count + 1)$/;"	C
+oddPlusZero	src/test/scala/IntProps.scala	/^        val oddPlusZero = odd.i + 0$/;"	C
+result	src/test/scala/IntProps.scala	/^        val result = even.i + odd.i$/;"	C
+result	src/test/scala/IntProps.scala	/^        val result = even1.i + even2.i$/;"	C
+result	src/test/scala/IntProps.scala	/^        val result = odd1.i + odd2.i$/;"	C
+streamingMean	src/test/scala/StreamingStats.scala	/^  def streamingMean(data: List[Double]): Double = {$/;"	m
+streamingMean2	src/test/scala/StreamingStats.scala	/^  def streamingMean2(data: List[Double]) : Either[StatsError, Double] = {$/;"	m
+streamingResult	src/test/scala/StreamingStats.scala	/^        val streamingResult = streamingMean(doubles)$/;"	C
+streamingResult	src/test/scala/StreamingStats.scala	/^        val streamingResult = streamingMean2(doubles)$/;"	C

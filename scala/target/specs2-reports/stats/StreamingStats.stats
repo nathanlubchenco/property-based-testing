@@ -1,0 +1,52 @@
+<StreamingStats-results timestamp="1405342480517"><result location="StreamingStats (StreamingStats.scala:28)" id="1365922816"><stats time="237" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1405342480530"><stats time="32" expectations="1" failures="1" examples="1"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1405514243448"><result location="StreamingStats (StreamingStats.scala:28)" id="1365922816"><stats time="279" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1405514243459"><stats time="21" expectations="1" failures="1" examples="1"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1405514981078"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="174" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="159492343"><stats time="172" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1405514981081"><stats time="15" expectations="2" failures="2" examples="2"><trend><stats time="15" expectations="1" failures="1" examples="1"></stats></trend></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1405515038635"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="167" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1405515038637"><stats time="14" expectations="101" failures="1" successes="1" examples="2"><trend><stats time="14" expectations="99" failures="-1" successes="1"></stats></trend></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1405515087055"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="145" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="-2063097390"><stats time="7" expectations="1" skipped="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1405515087058"><stats time="16" expectations="2" failures="1" skipped="1" examples="2"><trend><stats time="16" expectations="-99" skipped="1" successes="-1"></stats></trend></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1405991447652"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="282" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="-2063097390"><stats time="37" expectations="1" skipped="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1405991447667"><stats time="29" expectations="2" failures="1" skipped="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406075066055"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="259" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="-2063097390"><stats time="10" expectations="1" skipped="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406075066066"><stats time="26" expectations="2" failures="1" skipped="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406075123386"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="129" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="-2063097390"><stats time="6" expectations="1" skipped="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406075123392"><stats time="16" expectations="2" failures="1" skipped="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406075308974"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="122" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="-2063097390"><stats time="5" expectations="1" skipped="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406075308981"><stats time="18" expectations="2" failures="1" skipped="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406075322455"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="126" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406075322460"><stats time="16" expectations="101" failures="1" successes="1" examples="2"><trend><stats time="16" expectations="99" skipped="-1" successes="1"></stats></trend></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406077527241"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="160" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406077527253"><stats time="18" expectations="101" failures="1" successes="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406077629907"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="134" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406077629915"><stats time="18" expectations="101" failures="1" successes="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406118884090"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="301" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406118884098"><stats time="26" expectations="101" failures="1" successes="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406119694430"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="200" expectations="1" failures="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406119694438"><stats time="17" expectations="101" failures="1" successes="1" examples="2"></stats></StreamingStats-stats>
+<StreamingStats-results timestamp="1406119802521"><result location="StreamingStats (StreamingStats.scala:36)" id="1365922816"><stats time="175" expectations="1" failures="1" examples="1"></stats></result>
+<result location="StreamingStats (StreamingStats.scala:46)" id="-2063097390"><stats time="13" expectations="1" skipped="1" examples="1"></stats></result>
+</StreamingStats-results>
+<StreamingStats-stats timestamp="1406119802583"><stats time="16" expectations="2" failures="1" skipped="1" examples="2"><trend><stats time="16" expectations="-99" skipped="1" successes="-1"></stats></trend></stats></StreamingStats-stats>

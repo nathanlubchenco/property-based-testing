@@ -1,0 +1,14 @@
+[0m[[0minfo[0m] [0mStreamingStats[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mstreamingMean should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[33mx[0m produce the same mean as a non-streaming mean[0m[0m
+[0m[[31merror[0m] [0m   A counter-example is 'List()' (after 0 try)[0m
+[0m[[31merror[0m] [0m   0.0 is not close to NaN +/- 0.001 (StreamingStats.scala:41)[0m
+[0m[[0minfo[0m] [0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mstreamingMean2 should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m produce the same mean as a non-streaming mean OR an error[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0mTotal for specification StreamingStats[0m
+[0m[[0minfo[0m] [0m[36mFinished in 26 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m2 examples, 101 expectations, 1 failure, 0 error[0m[0m

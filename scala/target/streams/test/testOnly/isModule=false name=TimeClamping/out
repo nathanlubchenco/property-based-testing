@@ -1,0 +1,14 @@
+[0m[[0minfo[0m] [0mTimeClamping[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mclamping should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[33mx[0m produce an interval with a length of [0m[0m
+[0m[[0minfo[0m] [0m[37m       (A) bounding end - bounding start -[0m[0m
+[0m[[0minfo[0m] [0m[37m       (B) (if positive) start - boundingStart -[0m[0m
+[0m[[0minfo[0m] [0m[37m       (C) (if positive) end - boundingEnd[0m[0m
+[0m[[31merror[0m] [0m   A counter-example is [2013-05-22T10:50:48.085Z/2013-05-29T21:26:37.341Z, 2013-08-17T21:42:45.536Z/2013-10-16T22:50:34.633Z] (after 0 try)[0m
+[0m[[31merror[0m] [0m   '-6912968195' is not equal to '5188069097' (TimeClamping.scala:72)[0m
+[0m[[0minfo[0m] [0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0mTotal for specification TimeClamping[0m
+[0m[[0minfo[0m] [0m[36mFinished in 14 ms[0m[0m
+[0m[[0minfo[0m] [0m[36m[0m[36m1 example, 1 failure, 0 error[0m[0m

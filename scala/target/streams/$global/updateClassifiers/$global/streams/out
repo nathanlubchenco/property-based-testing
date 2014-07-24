@@ -6,7 +6,7 @@
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@548b489f
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1a28785c
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3
 [debug] 	local: revision in cache: org.scala-lang#scala-library;2.10.3
 [debug] 	found org.scala-lang#scala-library;2.10.3 in sbt-chain
@@ -14,6 +14,24 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->default(compile)]
+[info] Resolving joda-time#joda-time;2.3 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@470a698
+[debug] sbt-chain: module revision found in cache: joda-time#joda-time;2.3
+[debug] 	local: revision in cache: joda-time#joda-time;2.3
+[debug] 	found joda-time#joda-time;2.3 in sbt-chain
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->default(compile)]
+[info] Resolving org.joda#joda-convert;1.3.1 ...
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@ca2596a
+[debug] sbt-chain: module revision found in cache: org.joda#joda-convert;1.3.1
+[debug] 	local: revision in cache: org.joda#joda-convert;1.3.1
+[debug] 	found org.joda#joda-convert;1.3.1 in sbt-chain
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [runtime]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [compile]
@@ -21,19 +39,59 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->master]
 [debug] resolving dependencies for configuration 'test'
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [test]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [runtime]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test->default(compile)]
 [info] Resolving org.specs2#specs2_2.10;2.3.13 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@32e7c4ef
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3d13fbcd
 [debug] sbt-chain: module revision found in cache: org.specs2#specs2_2.10;2.3.13
 [debug] 	local: revision in cache: org.specs2#specs2_2.10;2.3.13
 [debug] 	found org.specs2#specs2_2.10;2.3.13 in sbt-chain
@@ -42,7 +100,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-compiler;2.10.4 [test->default(compile)]
 [info] Resolving org.scala-lang#scala-compiler;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5056c0b1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@13ecc016
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.10.4
 [debug] 	local: revision in cache: org.scala-lang#scala-compiler;2.10.4
 [debug] 	found org.scala-lang#scala-compiler;2.10.4 in sbt-chain
@@ -51,7 +109,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-compiler;2.10.4 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [test->default(compile)]
 [info] Resolving org.scala-lang#scala-library;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@159a8bd1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@328a0152
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	local: revision in cache: org.scala-lang#scala-library;2.10.4
 [debug] 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
@@ -61,7 +119,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-reflect;2.10.4 [test->default(compile)]
 [info] Resolving org.scala-lang#scala-reflect;2.10.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@44f0e58b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@bedc134
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.10.4
 [debug] 	local: revision in cache: org.scala-lang#scala-reflect;2.10.4
 [debug] 	found org.scala-lang#scala-reflect;2.10.4 in sbt-chain
@@ -71,7 +129,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-reflect;2.10.4 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalamacros#quasiquotes_2.10;2.0.0-M7 [test->default(compile)]
 [info] Resolving org.scalamacros#quasiquotes_2.10;2.0.0-M7 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@36c0ae96
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@55273929
 [debug] sbt-chain: module revision found in cache: org.scalamacros#quasiquotes_2.10;2.0.0-M7
 [debug] 	local: revision in cache: org.scalamacros#quasiquotes_2.10;2.0.0-M7
 [debug] 	found org.scalamacros#quasiquotes_2.10;2.0.0-M7 in sbt-chain
@@ -80,7 +138,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalamacros#quasiquotes_2.10;2.0.0-M7 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.pegdown#pegdown;1.2.1 [test->default(compile)]
 [info] Resolving org.pegdown#pegdown;1.2.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6a87832d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@52ecb5eb
 [debug] sbt-chain: module revision found in cache: org.pegdown#pegdown;1.2.1
 [debug] 	local: revision in cache: org.pegdown#pegdown;1.2.1
 [debug] 	found org.pegdown#pegdown;1.2.1 in sbt-chain
@@ -89,7 +147,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.pegdown#pegdown;1.2.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.parboiled#parboiled-java;1.1.4 [test->default(compile)]
 [info] Resolving org.parboiled#parboiled-java;1.1.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3ff42624
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@65827638
 [debug] sbt-chain: module revision found in cache: org.parboiled#parboiled-java;1.1.4
 [debug] 	local: revision in cache: org.parboiled#parboiled-java;1.1.4
 [debug] 	found org.parboiled#parboiled-java;1.1.4 in sbt-chain
@@ -98,7 +156,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.parboiled#parboiled-java;1.1.4 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.parboiled#parboiled-core;1.1.4 [test->default(compile)]
 [info] Resolving org.parboiled#parboiled-core;1.1.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@35a5b2
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@58eccb7
 [debug] sbt-chain: module revision found in cache: org.parboiled#parboiled-core;1.1.4
 [debug] 	local: revision in cache: org.parboiled#parboiled-core;1.1.4
 [debug] 	found org.parboiled#parboiled-core;1.1.4 in sbt-chain
@@ -107,7 +165,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.parboiled#parboiled-core;1.1.4 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm;4.1 [test->default(compile)]
 [info] Resolving org.ow2.asm#asm;4.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@333ac62e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@34d7cb51
 [debug] sbt-chain: module revision found in cache: org.ow2.asm#asm;4.1
 [debug] 	local: revision in cache: org.ow2.asm#asm;4.1
 [debug] 	found org.ow2.asm#asm;4.1 in sbt-chain
@@ -116,7 +174,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm;4.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm-tree;4.1 [test->default(compile)]
 [info] Resolving org.ow2.asm#asm-tree;4.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4af9999b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@23627751
 [debug] sbt-chain: module revision found in cache: org.ow2.asm#asm-tree;4.1
 [debug] 	local: revision in cache: org.ow2.asm#asm-tree;4.1
 [debug] 	found org.ow2.asm#asm-tree;4.1 in sbt-chain
@@ -125,7 +183,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm-tree;4.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm-analysis;4.1 [test->default(compile)]
 [info] Resolving org.ow2.asm#asm-analysis;4.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@327a051d
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@48d6e0e0
 [debug] sbt-chain: module revision found in cache: org.ow2.asm#asm-analysis;4.1
 [debug] 	local: revision in cache: org.ow2.asm#asm-analysis;4.1
 [debug] 	found org.ow2.asm#asm-analysis;4.1 in sbt-chain
@@ -134,7 +192,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm-analysis;4.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm-util;4.1 [test->default(compile)]
 [info] Resolving org.ow2.asm#asm-util;4.1 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7c55e052
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2449a2da
 [debug] sbt-chain: module revision found in cache: org.ow2.asm#asm-util;4.1
 [debug] 	local: revision in cache: org.ow2.asm#asm-util;4.1
 [debug] 	found org.ow2.asm#asm-util;4.1 in sbt-chain
@@ -143,7 +201,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.ow2.asm#asm-util;4.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalaz#scalaz-core_2.10;7.0.6 [test->default(compile)]
 [info] Resolving org.scalaz#scalaz-core_2.10;7.0.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@78e8b38b
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@b10b9b2
 [debug] sbt-chain: module revision found in cache: org.scalaz#scalaz-core_2.10;7.0.6
 [debug] 	local: revision in cache: org.scalaz#scalaz-core_2.10;7.0.6
 [debug] 	found org.scalaz#scalaz-core_2.10;7.0.6 in sbt-chain
@@ -152,7 +210,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalaz#scalaz-core_2.10;7.0.6 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalaz#scalaz-concurrent_2.10;7.0.6 [test->default(compile)]
 [info] Resolving org.scalaz#scalaz-concurrent_2.10;7.0.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@48891f64
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@dc8a29
 [debug] sbt-chain: module revision found in cache: org.scalaz#scalaz-concurrent_2.10;7.0.6
 [debug] 	local: revision in cache: org.scalaz#scalaz-concurrent_2.10;7.0.6
 [debug] 	found org.scalaz#scalaz-concurrent_2.10;7.0.6 in sbt-chain
@@ -161,7 +219,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalaz#scalaz-concurrent_2.10;7.0.6 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalaz#scalaz-effect_2.10;7.0.6 [test->default(compile)]
 [info] Resolving org.scalaz#scalaz-effect_2.10;7.0.6 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@13db71f1
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6d0ff6e0
 [debug] sbt-chain: module revision found in cache: org.scalaz#scalaz-effect_2.10;7.0.6
 [debug] 	local: revision in cache: org.scalaz#scalaz-effect_2.10;7.0.6
 [debug] 	found org.scalaz#scalaz-effect_2.10;7.0.6 in sbt-chain
@@ -170,7 +228,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalaz#scalaz-effect_2.10;7.0.6 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.hamcrest#hamcrest-core;1.3 [test->default(compile)]
 [info] Resolving org.hamcrest#hamcrest-core;1.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@51986e63
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2dd4f42a
 [debug] sbt-chain: module revision found in cache: org.hamcrest#hamcrest-core;1.3
 [debug] 	local: revision in cache: org.hamcrest#hamcrest-core;1.3
 [debug] 	found org.hamcrest#hamcrest-core;1.3 in sbt-chain
@@ -179,7 +237,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.hamcrest#hamcrest-core;1.3 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.mockito#mockito-core;1.9.5 [test->default(compile)]
 [info] Resolving org.mockito#mockito-core;1.9.5 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@32e3e421
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@14f8e8b
 [debug] sbt-chain: module revision found in cache: org.mockito#mockito-core;1.9.5
 [debug] 	local: revision in cache: org.mockito#mockito-core;1.9.5
 [debug] 	found org.mockito#mockito-core;1.9.5 in sbt-chain
@@ -188,7 +246,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.mockito#mockito-core;1.9.5 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.objenesis#objenesis;1.0 [test->default(compile)]
 [info] Resolving org.objenesis#objenesis;1.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@493b4526
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3e9985a5
 [debug] sbt-chain: module revision found in cache: org.objenesis#objenesis;1.0
 [debug] 	local: revision in cache: org.objenesis#objenesis;1.0
 [debug] 	found org.objenesis#objenesis;1.0 in sbt-chain
@@ -197,7 +255,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.objenesis#objenesis;1.0 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->junit#junit;4.11 [test->default(compile)]
 [info] Resolving junit#junit;4.11 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@9d135b6
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f51da55
 [debug] sbt-chain: module revision found in cache: junit#junit;4.11
 [debug] 	local: revision in cache: junit#junit;4.11
 [debug] 	found junit#junit;4.11 in sbt-chain
@@ -206,7 +264,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->junit#junit;4.11 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#classycle;1.4.3 [test->default(compile)]
 [info] Resolving org.specs2#classycle;1.4.3 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2eb3551e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7bb12424
 [debug] sbt-chain: module revision found in cache: org.specs2#classycle;1.4.3
 [debug] 	local: revision in cache: org.specs2#classycle;1.4.3
 [debug] 	found org.specs2#classycle;1.4.3 in sbt-chain
@@ -215,7 +273,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#classycle;1.4.3 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalacheck#scalacheck_2.10;1.11.4 [test->default(compile)]
 [info] Resolving org.scalacheck#scalacheck_2.10;1.11.4 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@4489140e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@32082306
 [debug] sbt-chain: module revision found in cache: org.scalacheck#scalacheck_2.10;1.11.4
 [debug] 	local: revision in cache: org.scalacheck#scalacheck_2.10;1.11.4
 [debug] 	found org.scalacheck#scalacheck_2.10;1.11.4 in sbt-chain
@@ -224,7 +282,7 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scalacheck#scalacheck_2.10;1.11.4 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-sbt#test-interface;1.0 [test->default(compile)]
 [info] Resolving org.scala-sbt#test-interface;1.0 ...
-[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7e23a27e
+[debug] sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@fc36edb
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#test-interface;1.0
 [debug] 	local: revision in cache: org.scala-sbt#test-interface;1.0
 [debug] 	found org.scala-sbt#test-interface;1.0 in sbt-chain
@@ -242,12 +300,28 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->master]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [optional]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [provided]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile-internal->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile-internal->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile-internal->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile-internal->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile-internal->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile-internal->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile-internal->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile-internal->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile-internal->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile-internal->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile-internal->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile-internal->master]
 [debug] resolving dependencies for configuration 'runtime-internal'
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [runtime-internal]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [runtime]
@@ -256,15 +330,39 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->master]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [optional]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime-internal->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime-internal->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime-internal->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime-internal->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime-internal->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime-internal->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime-internal->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime-internal->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime-internal->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime-internal->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime-internal->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime-internal->master]
 [debug] resolving dependencies for configuration 'test-internal'
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [test-internal]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [test]
@@ -275,11 +373,35 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [compile->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [compile->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [compile->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.3 [runtime->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [runtime->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [runtime->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-lang#scala-library;2.10.4 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [runtime->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test->compile]
@@ -370,6 +492,14 @@
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.scala-sbt#test-interface;1.0 [test->master]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [optional]
 [debug] == resolving dependencies for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 [provided]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test-internal->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test-internal->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test-internal->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->joda-time#joda-time;2.3 [test-internal->master]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test-internal->default(compile)]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test-internal->runtime]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test-internal->compile]
+[debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.joda#joda-convert;1.3.1 [test-internal->master]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test-internal->default(compile)]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test-internal->runtime]
 [debug] == resolving dependencies property-based-testing#property-based-testing$sources_javadoc_2.10;0.1->org.specs2#specs2_2.10;2.3.13 [test-internal->compile]
@@ -514,24 +644,18 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar(doc)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.3!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.3!joda-time.jar(src)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.3!joda-time.jar(doc)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.3!joda-time.jar
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.3.1!joda-convert.jar
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.3.1!joda-convert.jar(doc)
+[debug] 	[NOT REQUIRED] org.joda#joda-convert;1.3.1!joda-convert.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar(doc)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.10.4!scala-library.jar(src)
 [debug] 	[NOT REQUIRED] org.specs2#specs2_2.10;2.3.13!specs2_2.10.jar
-[debug] 		tried /Users/simpleenergy/.ivy2/local/org.specs2/specs2_2.10/2.3.13/srcs/specs2_2.10-sources.jar
-[debug] 		tried /Users/simpleenergy/.ivy2/local/org.specs2/specs2_2.10/2.3.13/docs/specs2_2.10-javadoc.jar
-[debug] 		tried http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-sources.jar
-[info] downloading http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-sources.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-sources.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-sources.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-sources.jar
-[info] 	[SUCCESSFUL ] org.specs2#specs2_2.10;2.3.13!specs2_2.10.jar(src) (1243ms)
-[debug] 		tried http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-javadoc.jar
-[info] downloading http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-javadoc.jar ...
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-javadoc.jar
-[debug] 	public: downloading http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-javadoc.jar.sha1
-[debug] sha1 OK for http://repo1.maven.org/maven2/org/specs2/specs2_2.10/2.3.13/specs2_2.10-2.3.13-javadoc.jar
-[info] 	[SUCCESSFUL ] org.specs2#specs2_2.10;2.3.13!specs2_2.10.jar(doc) (2569ms)
+[debug] 	[NOT REQUIRED] org.specs2#specs2_2.10;2.3.13!specs2_2.10.jar(src)
+[debug] 	[NOT REQUIRED] org.specs2#specs2_2.10;2.3.13!specs2_2.10.jar(doc)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar(doc)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4!scala-compiler.jar
@@ -600,7 +724,7 @@
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar(doc)
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar(src)
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar(doc)
-[debug] :: resolution report :: resolve 423ms :: artifacts dl 3844ms
+[debug] :: resolution report :: resolve 437ms :: artifacts dl 46ms
 [debug] 	report for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 compile produced in /Users/simpleenergy/personal/property-based-testing/scala/target/resolution-cache/reports/property-based-testing-property-based-testing$sources_javadoc_2.10-compile.xml
 [debug] 	report for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 runtime produced in /Users/simpleenergy/personal/property-based-testing/scala/target/resolution-cache/reports/property-based-testing-property-based-testing$sources_javadoc_2.10-runtime.xml
 [debug] 	report for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 test produced in /Users/simpleenergy/personal/property-based-testing/scala/target/resolution-cache/reports/property-based-testing-property-based-testing$sources_javadoc_2.10-test.xml
@@ -614,4 +738,4 @@
 [debug] 	report for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 docs produced in /Users/simpleenergy/personal/property-based-testing/scala/target/resolution-cache/reports/property-based-testing-property-based-testing$sources_javadoc_2.10-docs.xml
 [debug] 	report for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 pom produced in /Users/simpleenergy/personal/property-based-testing/scala/target/resolution-cache/reports/property-based-testing-property-based-testing$sources_javadoc_2.10-pom.xml
 [debug] 	report for property-based-testing#property-based-testing$sources_javadoc_2.10;0.1 scala-tool produced in /Users/simpleenergy/personal/property-based-testing/scala/target/resolution-cache/reports/property-based-testing-property-based-testing$sources_javadoc_2.10-scala-tool.xml
-[debug] 	resolve done (423ms resolve - 3844ms download)
+[debug] 	resolve done (437ms resolve - 46ms download)

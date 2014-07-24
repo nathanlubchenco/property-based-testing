@@ -4,7 +4,7 @@
 		module="property-based-testing$sbt_2.10"
 		revision="0.1"
 		status="integration"
-		publication="20140712145424"
+		publication="20140721192513"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

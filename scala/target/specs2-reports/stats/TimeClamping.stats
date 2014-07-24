@@ -1,0 +1,52 @@
+<TimeClamping-stats timestamp="1405992517104"><stats time="3"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405995581126"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="106" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405995581129"><stats time="14" expectations="1" errors="1" examples="1"><trend><stats time="14" errors="1" examples="1"></stats></trend></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405995644328"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="117" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405995644330"><stats time="15" expectations="1" failures="1" examples="1"><trend><stats time="15" failures="1" errors="-1"></stats></trend></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405995711133"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="121" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405995711136"><stats time="16" expectations="1" failures="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405995738186"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="99" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405995738190"><stats time="15" expectations="1" errors="1" examples="1"><trend><stats time="15" failures="-1" errors="1"></stats></trend></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405995742979"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="124" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405995742983"><stats time="14" expectations="1" failures="1" examples="1"><trend><stats time="14" failures="1" errors="-1"></stats></trend></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405995787538"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="94" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405995787544"><stats time="13" expectations="1" errors="1" examples="1"><trend><stats time="13" failures="-1" errors="1"></stats></trend></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996258059"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="103" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996258063"><stats time="13" expectations="1" errors="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996261307"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="105" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996261312"><stats time="14" expectations="1" errors="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996264548"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="106" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996264552"><stats time="13" expectations="1" errors="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996267809"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="109" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996267814"><stats time="13" expectations="1" errors="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996275586"><result location="TimeClamping (TimeClamping.scala:46)" id="605561093"><stats time="117" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996275590"><stats time="13" expectations="1" errors="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996347519"><result location="TimeClamping (TimeClamping.scala:52)" id="605561093"><stats time="102" expectations="1" errors="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996347524"><stats time="14" expectations="1" errors="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996903889"><result location="TimeClamping (TimeClamping.scala:53)" id="605561093"><stats time="111" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996903894"><stats time="13" expectations="1" failures="1" examples="1"><trend><stats time="13" failures="1" errors="-1"></stats></trend></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1405996926092"><result location="TimeClamping (TimeClamping.scala:53)" id="605561093"><stats time="121" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1405996926097"><stats time="14" expectations="1" failures="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1406075066054"><result location="TimeClamping (TimeClamping.scala:53)" id="605561093"><stats time="258" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1406075066070"><stats time="26" expectations="1" failures="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1406119694430"><result location="TimeClamping (TimeClamping.scala:53)" id="605561093"><stats time="198" expectations="1" failures="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1406119694439"><stats time="17" expectations="1" failures="1" examples="1"></stats></TimeClamping-stats>
+<TimeClamping-results timestamp="1406119802521"><result location="TimeClamping (TimeClamping.scala:53)" id="605561093"><stats time="14" expectations="1" skipped="1" examples="1"></stats></result>
+</TimeClamping-results>
+<TimeClamping-stats timestamp="1406119802582"><stats time="16" expectations="1" skipped="1" examples="1"><trend><stats time="16" failures="-1" skipped="1"></stats></trend></stats></TimeClamping-stats>

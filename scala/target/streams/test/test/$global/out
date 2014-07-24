@@ -1,6 +1,12 @@
+[0m[[0mdebug[0m] [0mRunning TaskDef(TimeClamping, specs2 Specification fingerprint, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0mRunning TaskDef(IntProps, specs2 Specification fingerprint, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(StreamingStats, specs2 Specification fingerprint, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0mSummary for ScalaCheck not available.[0m
 [0m[[0mdebug[0m] [0mSummary for specs2 not available.[0m
-[0m[[0minfo[0m] [0mPassed: Total 6, Failed 0, Errors 0, Passed 6[0m
+[0m[[31merror[0m] [0mFailed: Total 9, Failed 1, Errors 0, Passed 6, Skipped 2[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	IntProps[0m
+[0m[[0mdebug[0m] [0m	TimeClamping[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	StreamingStats[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

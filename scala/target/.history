@@ -13,3 +13,30 @@ relaod
 reload
 test
 exit
+console
+ls
+compile
+test
+~test-only *Clamping*
+reload
+~test-only *Clamping*
+reload
+~test-only *Clamping*
+exit
+test
+test-only *IntProps*
+test-only *StreamingStats*
+exit
+test-only *Int*
+test-only *Strea*
+reload
+test-only *Strea*
+relaod
+reload
+test-only *Strea*
+test
+reload
+test
+reload
+test
+exit
