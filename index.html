@@ -4,7 +4,7 @@
   <title>Property Based Testing</title>
   <meta charset="utf-8">
   <meta name="description" content="Property Based Testing">
-  <meta name="author" content="Nathan Lubchenco">
+  <meta name="author" content="Nathan Lubchenco | @nathanlubchenco">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -34,7 +34,7 @@
   <hgroup class="auto-fadein">
     <h1>Property Based Testing</h1>
     <h2>Get more, for less</h2>
-    <p>Nathan Lubchenco<br/>Data Scientist @simpleenergy</p>
+    <p>Nathan Lubchenco | @nathanlubchenco<br/>Data Scientist @simpleenergy</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,10 +43,12 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>why should i pay attention for the next ~15 minutes?</h2>
+    <h2>why should i pay attention for the next</h2>
   </hgroup>
   <article data-timings="">
-    <h3>if all goes well, you&#39;ll:</h3>
+    <h2>~15 minutes?</h2>
+
+<h3>if all goes well, you&#39;ll:</h3>
 
 <ul>
 <li><p>discover bugs you wouldn&#39;t have otherwise caught</p></li>
@@ -106,19 +108,23 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>ScalaCheck Example -- the function</h2>
+    <h2>ScalaCheck Example: setup</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>def streamingMean(data: Stream[Double]): Error \/ Mean = {
-  def go(data: Stream[Double], mean: Double, count: Double): Mean = {
-    if (data.isEmpty) Mean(mean)
-    else {
-      val newMean = ((mean * count) + data.head) / (count + 1)
-      go(data.tail, newMean, count + 1)
-    }
-  }
-  if (data.isEmpty) EmptyStream.left
-  else go(data, 0, 0).right
+    <pre><code>import org.specs2.mutable._
+import org.specs2.ScalaCheck
+import org.scalacheck._
+
+case class Even(i: Int) extends AnyVal
+case class Odd(i: Int) extends AnyVal
+
+implicit val arbEven: Arbitrary[Even] = Arbitrary(Gen.posNum[Int]
+  .filter(x =&gt; x % 2 == 0).map(Even))
+implicit val arbOdd: Arbitrary[Odd] = Arbitrary(Gen.posNum[Int]
+  .filter(x =&gt; x % 2 != 0).map(Odd))
+
+class IntProps extends Specification with ScalaCheck {
+....
 }
 </code></pre>
 
@@ -128,17 +134,20 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>ScalaCheck Example -- helpers</h2>
+    <h2>ScalaCheck Example 1:</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>implicit val arbStream: Arbitrary[Stream[Double]] = 
-  Arbitrary(Gen.containerOf[Stream, Double](Gen.posNum[Double]))
-
-def withinErrorBounds(d1: Double, d2: Double, error: Double) = 
-  if (d1 &gt; (d2 - error) &amp;&amp; d1 &lt; (d2 + error)) true else false
-
-def emptyStreamOrNoReplacement(error: Error) = 
-  if (error == EmptyStream || error == NoReplacement) true else false
+    <pre><code>&quot;odds integers&quot; should {
+  &quot;always be odd&quot; in check {
+    (odd: Odd) =&gt;
+      (odd.i % 2 != 0) must beTrue
+  }
+  &quot;produce an even number when added together&quot; in check {
+    (odd1: Odd, odd2: Odd) =&gt;
+      val result = odd1.i + odd2.i
+      (result % 2 == 0) must beTrue
+  }
+}
 </code></pre>
 
   </article>
@@ -147,26 +156,277 @@ def emptyStreamOrNoReplacement(error: Error) =
 
 <slide class="" id="slide-6" style="background:;">
   <hgroup>
-    <h2>ScalaCheck Example -- the test</h2>
+    <h2>ScalaCheck Example 2:</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>&quot;streamingMean&quot; should {
-  &quot;return the correct mean&quot; in check {
-    (data: Stream[Double]) =&gt;
-      val streamedMean = StreamingStats.streamingMean(data)
-      if (data.isEmpty) {
-        streamedMean.fold(error =&gt; EmptyStream mustEqual error, _ =&gt; ???)
-      }
-      else {
-        val mean = (data.foldLeft(0.0)(_ + _) / data.size)
-        streamedMean.fold(
-          error =&gt; EmptyStream mustEqual error, 
-          result =&gt; withinErrorBounds(result.d, mean, 0.001d) must beTrue
-        )
-      } 
+    <pre><code>&quot;even integers&quot; should {
+  &quot;always be even&quot; in check {
+    (even: Even) =&gt;
+      (even.i % 2 == 0) must beTrue
+  }
+  &quot;produce an even number when added together&quot; in check {
+    (even1: Even, even2: Even) =&gt;
+      val result = even1.i + even2.i
+      (result % 2 == 0) must beTrue
   }
 }
 </code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example 3:</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;an odd and an even number added together&quot; should {
+  &quot;be odd&quot; in check {
+    (even: Even, odd: Odd) =&gt;
+      val result = even.i + odd.i
+      (result % 2 != 0) must beTrue
+  }
+}
+
+&quot;any number added to zero&quot; should {
+  &quot;equal the original number&quot; in check {
+    (even: Even, odd: Odd) =&gt;
+      val evenPlusZero = even.i + 0
+      val oddPlusZero = odd.i + 0
+
+      evenPlusZero mustEqual even.i
+      oddPlusZero mustEqual odd.i
+  }
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Ok, so what? Or, how can this really help me?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Working with Collections such as Lists</p>
+
+<ul>
+<li>generation of empty collections</li>
+</ul></li>
+<li><p>Working with numbers</p>
+
+<ul>
+<li>generation of negatives, zero, large numbers</li>
+</ul></li>
+<li><p>Working with Dates / Times</p>
+
+<ul>
+<li>generation of values crossing over boundaries such as years or months</li>
+</ul></li>
+<li><p>Testing serialization</p>
+
+<ul>
+<li>checking round trips for many possible values very quickly</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Common Pitfalls</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Re-implementing a function</li>
+<li>Can be difficult to determine what properties something should have
+
+<ul>
+<li>Forces you to think carefully about what a function is doing</li>
+</ul></li>
+<li>Some generators are complex
+
+<ul>
+<li>but, not everything is a nail</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Less Trivial Examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>def streamingMean(data: List[Double]): Double = {
+  def go(data: List[Double], mean: Double, count: Int): Double = {
+    if (data.isEmpty) mean
+    else {
+      val newMean = ((mean * count) + data.head) / (count + 1)
+      go(data.tail, newMean, count +1)
+    }
+  }
+  go(data, 0, 0)
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>This Test Reveals a Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;streamingMean&quot; should {
+    &quot;produce the same mean as a non-streaming mean&quot; in check {
+      (doubles: List[Double]) =&gt;
+        val streamingResult = streamingMean(doubles)
+        val checkResult = doubles.sum / doubles.size
+
+        streamingResult must beCloseTo(checkResult, 0.001)
+    }
+  }
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>A Possible Solution</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>sealed trait StatsError
+case class InsufficientData(s: String) extends StatsError
+
+def streamingMean2(data: List[Double]) : Either[StatsError, Double] = {
+  def go(data: List[Double], mean: Double, count: Int): Double = {
+    if (data.isEmpty) mean
+    else {
+      val newMean = ((mean * count) + data.head) / (count + 1)
+      go(data.tail, newMean, count +1)
+    }
+  }
+  if(data.isEmpty) Left(InsufficientData(s&quot;Could not compute mean for $data&quot;))
+  else Right(go(data, 0, 0))
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>A Final Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Interval Clamping</h3>
+
+<h3>1:</h3>
+
+<h4>|-----------|</h4>
+
+<h4>----|-----------|</h4>
+
+<h4>----X-------X</h4>
+
+<h3>2:</h3>
+
+<h4>-|-------|</h4>
+
+<h4>|--------------|</h4>
+
+<h4>-X-------X</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h3>3:</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>|---------------|</h4>
+
+<h4>----|-------|</h4>
+
+<h4>----X-------X</h4>
+
+<h3>4:</h3>
+
+<h4>|-------|</h4>
+
+<h4>---|--------|</h4>
+
+<h4>---X----X</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h3>5:</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>|------|</h4>
+
+<h4>-----------|------|</h4>
+
+<h4>----???----</h4>
+
+<h3>6:</h3>
+
+<h4>------------|----------|</h4>
+
+<h4>-|-------|---------</h4>
+
+<h4>-------???------</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Property-Based Testing</h3>
+
+<ul>
+<li>allows you to generate hundreds of cases instead of manually generating a few</li>
+<li>effectively reveals edge cases you haven&#39;t considered
+
+<ul>
+<li>Every few weeks on Twitter someone mentions a bug discovered after running property based tests thousands of times</li>
+</ul></li>
+<li>helps sharpen your understanding of what exactly a function is supposed to be doing
+
+<ul>
+<li>writing properties can be difficult, but they reveal the underlying structure of a function</li>
+</ul></li>
+<li>in many cases actually takes less time to write</li>
+</ul>
+
+<p><strong>Check out a library in a language you work in!</strong></p>
+
+<p><strong>Thanks</strong> </p>
+
+<p>Slides and code at: 
+<a href="https://github.com/nathanlubchenco/property-based-testing">https://github.com/nathanlubchenco/property-based-testing</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -178,7 +438,7 @@ def emptyStreamOrNoReplacement(error: Error) =
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='why should i pay attention for the next ~15 minutes?'>
+        data-slide=1 title='why should i pay attention for the next'>
          1
       </a>
     </li>
@@ -196,20 +456,80 @@ def emptyStreamOrNoReplacement(error: Error) =
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='ScalaCheck Example -- the function'>
+        data-slide=4 title='ScalaCheck Example: setup'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='ScalaCheck Example -- helpers'>
+        data-slide=5 title='ScalaCheck Example 1:'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='ScalaCheck Example -- the test'>
+        data-slide=6 title='ScalaCheck Example 2:'>
          6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='ScalaCheck Example 3:'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Ok, so what? Or, how can this really help me?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Common Pitfalls'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Less Trivial Examples'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='This Test Reveals a Problem'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='A Possible Solution'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='A Final Example'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='3:'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='5:'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Summary'>
+         16
       </a>
     </li>
   </ul>
