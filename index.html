@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Property Based Testing</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Property Based Testing">
+  <meta name="author" content="Nathan Lubchenco | @nathanlubchenco">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Property Based Testing</h1>
+    <h2>Get more, for less</h2>
+    <p>Nathan Lubchenco | @nathanlubchenco<br/>Data Scientist @simpleenergy</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>why should i pay attention for the next</h2>
+  </hgroup>
+  <article data-timings="">
+    <h2>~15 minutes?</h2>
+
+<h3>if all goes well, you&#39;ll:</h3>
+
+<ul>
+<li><p>discover bugs you wouldn&#39;t have otherwise caught</p></li>
+<li><p>have to think less hard</p></li>
+<li><p>get to work less hard</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>What is Property Based Testing?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Instead of testing that a function produces the appropriate output from a specific input, test that a property holds for a range of generated inputs</p>
+
+<h3>Unit Based Example for addition</h3>
+
+<ul>
+<li>2 + 2 = 4</li>
+<li>0 + 10 = 10</li>
+<li>-2 + 2 = 0</li>
+</ul>
+
+<h3>Property Based example for addition</h3>
+
+<ul>
+<li>odd + odd = even</li>
+<li>even + odd = odd</li>
+<li>negative + negative = negative</li>
+<li>n + zero = n</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Some Libraries</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>QuickCheck (Haskell)</li>
+<li>ScalaCheck</li>
+<li>qc.js </li>
+<li>rubycheck</li>
+<li>qc.py</li>
+<li>numerous others (check wikipedia for links)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example: setup</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>import org.specs2.mutable._
+import org.specs2.ScalaCheck
+import org.scalacheck._
+
+case class Even(i: Int) extends AnyVal
+case class Odd(i: Int) extends AnyVal
+
+implicit val arbEven: Arbitrary[Even] = Arbitrary(Gen.posNum[Int]
+  .filter(x =&gt; x % 2 == 0).map(Even))
+implicit val arbOdd: Arbitrary[Odd] = Arbitrary(Gen.posNum[Int]
+  .filter(x =&gt; x % 2 != 0).map(Odd))
+
+class IntProps extends Specification with ScalaCheck {
+....
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example 1:</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;odds integers&quot; should {
+  &quot;always be odd&quot; in check {
+    (odd: Odd) =&gt;
+      (odd.i % 2 != 0) must beTrue
+  }
+  &quot;produce an even number when added together&quot; in check {
+    (odd1: Odd, odd2: Odd) =&gt;
+      val result = odd1.i + odd2.i
+      (result % 2 == 0) must beTrue
+  }
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example 2:</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;even integers&quot; should {
+  &quot;always be even&quot; in check {
+    (even: Even) =&gt;
+      (even.i % 2 == 0) must beTrue
+  }
+  &quot;produce an even number when added together&quot; in check {
+    (even1: Even, even2: Even) =&gt;
+      val result = even1.i + even2.i
+      (result % 2 == 0) must beTrue
+  }
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>ScalaCheck Example 3:</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;an odd and an even number added together&quot; should {
+  &quot;be odd&quot; in check {
+    (even: Even, odd: Odd) =&gt;
+      val result = even.i + odd.i
+      (result % 2 != 0) must beTrue
+  }
+}
+
+&quot;any number added to zero&quot; should {
+  &quot;equal the original number&quot; in check {
+    (even: Even, odd: Odd) =&gt;
+      val evenPlusZero = even.i + 0
+      val oddPlusZero = odd.i + 0
+
+      evenPlusZero mustEqual even.i
+      oddPlusZero mustEqual odd.i
+  }
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Ok, so what? Or, how can this really help me?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Working with Collections such as Lists</p>
+
+<ul>
+<li>generation of empty collections</li>
+</ul></li>
+<li><p>Working with numbers</p>
+
+<ul>
+<li>generation of negatives, zero, large numbers</li>
+</ul></li>
+<li><p>Working with Dates / Times</p>
+
+<ul>
+<li>generation of values crossing over boundaries such as years or months</li>
+</ul></li>
+<li><p>Testing serialization</p>
+
+<ul>
+<li>checking round trips for many possible values very quickly</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Common Pitfalls</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Re-implementing a function</li>
+<li>Can be difficult to determine what properties something should have
+
+<ul>
+<li>Forces you to think carefully about what a function is doing</li>
+</ul></li>
+<li>Some generators are complex
+
+<ul>
+<li>but, not everything is a nail</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Less Trivial Examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>def streamingMean(data: List[Double]): Double = {
+  def go(data: List[Double], mean: Double, count: Int): Double = {
+    if (data.isEmpty) mean
+    else {
+      val newMean = ((mean * count) + data.head) / (count + 1)
+      go(data.tail, newMean, count +1)
+    }
+  }
+  go(data, 0, 0)
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>This Test Reveals a Problem</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>&quot;streamingMean&quot; should {
+    &quot;produce the same mean as a non-streaming mean&quot; in check {
+      (doubles: List[Double]) =&gt;
+        val streamingResult = streamingMean(doubles)
+        val checkResult = doubles.sum / doubles.size
+
+        streamingResult must beCloseTo(checkResult, 0.001)
+    }
+  }
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>A Possible Solution</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>sealed trait StatsError
+case class InsufficientData(s: String) extends StatsError
+
+def streamingMean2(data: List[Double]) : Either[StatsError, Double] = {
+  def go(data: List[Double], mean: Double, count: Int): Double = {
+    if (data.isEmpty) mean
+    else {
+      val newMean = ((mean * count) + data.head) / (count + 1)
+      go(data.tail, newMean, count +1)
+    }
+  }
+  if(data.isEmpty) Left(InsufficientData(s&quot;Could not compute mean for $data&quot;))
+  else Right(go(data, 0, 0))
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>A Final Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Interval Clamping</h3>
+
+<h3>1:</h3>
+
+<h4>|-----------|</h4>
+
+<h4>----|-----------|</h4>
+
+<h4>----X-------X</h4>
+
+<h3>2:</h3>
+
+<h4>-|-------|</h4>
+
+<h4>|--------------|</h4>
+
+<h4>-X-------X</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h3>3:</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>|---------------|</h4>
+
+<h4>----|-------|</h4>
+
+<h4>----X-------X</h4>
+
+<h3>4:</h3>
+
+<h4>|-------|</h4>
+
+<h4>---|--------|</h4>
+
+<h4>---X----X</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h3>5:</h3>
+  </hgroup>
+  <article data-timings="">
+    <h4>|------|</h4>
+
+<h4>-----------|------|</h4>
+
+<h4>----???----</h4>
+
+<h3>6:</h3>
+
+<h4>------------|----------|</h4>
+
+<h4>-|-------|---------</h4>
+
+<h4>-------???------</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Property-Based Testing</h3>
+
+<ul>
+<li>allows you to generate hundreds of cases instead of manually generating a few</li>
+<li>effectively reveals edge cases you haven&#39;t considered
+
+<ul>
+<li>Every few weeks on Twitter someone mentions a bug discovered after running property based tests thousands of times</li>
+</ul></li>
+<li>helps sharpen your understanding of what exactly a function is supposed to be doing
+
+<ul>
+<li>writing properties can be difficult, but they reveal the underlying structure of a function</li>
+</ul></li>
+<li>in many cases actually takes less time to write</li>
+</ul>
+
+<p><strong>Check out a library in a language you work in!</strong></p>
+
+<p><strong>Thanks</strong> </p>
+
+<p>Slides and code at: 
+<a href="https://github.com/nathanlubchenco/property-based-testing">https://github.com/nathanlubchenco/property-based-testing</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='why should i pay attention for the next'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='What is Property Based Testing?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Some Libraries'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='ScalaCheck Example: setup'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='ScalaCheck Example 1:'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='ScalaCheck Example 2:'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='ScalaCheck Example 3:'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Ok, so what? Or, how can this really help me?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Common Pitfalls'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Less Trivial Examples'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='This Test Reveals a Problem'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='A Possible Solution'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='A Final Example'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='3:'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='5:'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Summary'>
+         16
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
